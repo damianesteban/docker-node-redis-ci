@@ -12,5 +12,6 @@ server.route([{
 }]);
 
 server.start(() => {
+  console.log('Me!!')
   console.log(`Server is listening at: ${server.info.uri}`)
 })
