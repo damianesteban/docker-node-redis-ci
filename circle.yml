@@ -3,13 +3,13 @@ machine:
     - docker
 
 dependencies:
-  override:
-    - sudo pip install --upgrade docker-compose==1.3.3
+  pre:
+    - pip install docker-compose
 
 test:
   override:
     - docker-compose run -d --no-deps web
-    - cd app; mocha
+    - npm test
 
 deployment:
   hub:
