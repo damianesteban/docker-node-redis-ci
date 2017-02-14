@@ -9,7 +9,7 @@ dependencies:
 test:
   override:
     - docker-compose run -d --no-deps web
-    - npm test
+    - cd app; npm test
 
 deployment:
   hub:
